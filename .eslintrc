@@ -3,11 +3,12 @@
     "airbnb-base",
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
+    "plugin:vitest-globals/recommended",
     "prettier"
   ],
   "env": {
     "node": true,
-    "jest": true
+    "vitest-globals/env": true
   },
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -18,7 +19,12 @@
     "camelcase": "off",
     "@typescript-eslint/naming-convention": "off",
     "import/no-extraneous-dependencies": [
-      "error"
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts"
+        ]
+      }
     ],
     "class-methods-use-this": "off"
   }
