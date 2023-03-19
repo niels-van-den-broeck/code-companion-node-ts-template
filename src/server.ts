@@ -3,7 +3,9 @@ import autoLoad from '@fastify/autoload';
 import path from 'path';
 
 const server = Fastify({
-  logger: true,
+  logger: {
+    level: process.env.LOG_LEVEL || 'info',
+  },
 });
 
 server.register(autoLoad, {
