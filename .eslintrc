@@ -1,24 +1,25 @@
 {
-    "extends": [
-        "airbnb-base",
-        "airbnb-typescript/base",
-        "plugin:@typescript-eslint/recommended"
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "import/no-extraneous-dependencies": [
+      "error"
     ],
-    "env": {
-        "node": true,
-        "jest": true
-    },
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {
-        "import/prefer-default-export": "off",
-        "arrow-parens": "off",
-        "camelcase": "off",
-        "@typescript-eslint/naming-convention": "off",
-        "import/no-extraneous-dependencies": [
-            "error"
-        ],
-        "class-methods-use-this": "off"
-    }
+    "class-methods-use-this": "off"
+  }
 }

@@ -1,1 +1,1 @@
-console.log("application entry point");
+console.log('application entry point');
