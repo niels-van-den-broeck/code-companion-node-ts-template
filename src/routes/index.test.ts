@@ -1,11 +1,14 @@
+import { describe, before, test } from 'node:test';
+import assert from 'node:assert/strict';
+
 import request from 'supertest';
 
 import server from '../server';
 
 const RESOURCE_URI = '/';
 
-describe(`RESOURCE_URI`, () => {
-  beforeAll(async () => {
+describe(`${RESOURCE_URI}`, () => {
+  before(async () => {
     await server.ready();
   });
 
@@ -20,6 +23,6 @@ describe(`RESOURCE_URI`, () => {
   test('it works', async () => {
     const { status } = await act();
 
-    expect(status).toBe(200);
+    assert.equal(status, 200);
   });
 });

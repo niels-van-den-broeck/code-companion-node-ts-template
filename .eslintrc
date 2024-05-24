@@ -3,7 +3,6 @@
     "airbnb-base",
     "airbnb-typescript/base",
     "plugin:@typescript-eslint/recommended",
-    "plugin:vitest-globals/recommended",
     "prettier"
   ],
   "env": {
