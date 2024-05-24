@@ -10,7 +10,7 @@
     "lint": "eslint ./src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Niels Van den broeck",
   "license": "ISC",
   "devDependencies": {
     "@types/supertest": "^6.0.2",
