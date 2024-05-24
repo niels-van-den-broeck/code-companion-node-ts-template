@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
-    "test": "node -r ts-node/register --test src/**/*.test.ts",
-    "test:watch": "LOG_LEVEL=error vitest watch",
+    "test": "LOG_LEVEL=error node -r ts-node/register --test src/**/*.test.ts",
     "lint": "eslint ./src"
   },
   "keywords": [],
