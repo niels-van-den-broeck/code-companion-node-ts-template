@@ -1,7 +1,7 @@
 {
-  "name": "code-companion-auth",
+  "name": "code-companion-node-ts-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template for fastify apps",
   "main": "index.js",
   "scripts": {
     "start": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
