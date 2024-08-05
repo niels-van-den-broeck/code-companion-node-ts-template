@@ -28,7 +28,9 @@ jobs:
     steps:
       - checkout_and_install
       - run: mkdir ~/test-report
-      - run: npm run test -- --test-reporter node-test-junit-reporter --test-reporter-destination ~/test-report/report.xml
+      - run: LOG_LEVEL=error node -r ts-node/register --test --test-reporter node-test-junit-reporter --test-reporter-destination ~/test-report/report.xml src/**/*.test.ts
+      - store_test_results:
+          path: ~/test-report
 
 workflows:
   complete:
