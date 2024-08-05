@@ -1,0 +1,39 @@
+version: 2.1
+
+executors:
+  node_lts:
+    docker:
+      - image: cimg/node:20.13.1
+    working_directory: ~/repo
+
+commands:
+  checkout_and_install:
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v20-dependencies-{{ checksum "package.json" }}
+            - v20-dependencies-
+      - run: npm i
+
+jobs:
+  build:
+    executor: node_lts
+    steps:
+      - checkout_and_install
+      - run: npm run lint
+
+  test:
+    executor: node_lts
+    steps:
+      - checkout_and_install
+      - run: mkdir ~/test-report
+      - run: $ npm run test -- --test-reporter node-test-junit-reporter --test-reporter-destination ~/test-report/report.xml
+
+workflows:
+  complete:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
