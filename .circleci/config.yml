@@ -28,7 +28,7 @@ jobs:
     steps:
       - checkout_and_install
       - run: mkdir ~/test-report
-      - run: $ npm run test -- --test-reporter node-test-junit-reporter --test-reporter-destination ~/test-report/report.xml
+      - run: npm run test -- --test-reporter node-test-junit-reporter --test-reporter-destination ~/test-report/report.xml
 
 workflows:
   complete:
