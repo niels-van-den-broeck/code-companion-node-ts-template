@@ -6,8 +6,7 @@
     "prettier"
   ],
   "env": {
-    "node": true,
-    "vitest-globals/env": true
+    "node": true
   },
   "parserOptions": {
     "project": "./tsconfig.json"
