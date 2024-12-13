@@ -6,27 +6,29 @@
   "scripts": {
     "start": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
     "test": "LOG_LEVEL=error node -r ts-node/register --test src/**/*.test.ts",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "docker:build": "docker build --build-arg PORT=3000 -t code-companion-node-ts-template .",
+    "docker:run": "docker run -p  code-companion-node-ts-template"
   },
   "keywords": [],
   "author": "Niels Van den broeck",
   "license": "ISC",
   "devDependencies": {
     "@types/supertest": "^6.0.2",
-    "dotenv": "^16.4.5",
-    "eslint": "^8.36.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.30.0",
     "eslint-plugin-prettier": "^5.2.1",
     "node-test-junit-reporter": "^1.1.5",
-    "nodemon": "^3.1.4",
+    "nodemon": "^3.1.7",
     "supertest": "^7.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@fastify/autoload": "^5.10.0",
-    "fastify": "^4.28.1"
+    "@fastify/autoload": "^6.0.2",
+    "fastify": "^5.1.0"
   }
 }
