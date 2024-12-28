@@ -11,7 +11,7 @@
 
 ## Start the server
 
-Run `npm run start`
+Run `npm run dev`
 
 ## Adding routes
 
@@ -23,10 +23,9 @@ Tests use the default [nodejs test runner](https://nodejs.org/api/test.html).
 
 ## CI/CD
 
-### Circleci
+### Github actions
 
-A default config for circleci has been added which runs your linting steps and tests on push. 
-To make this work, create an account on CircleCI, connect your github, and follow the project you have created from this template.
+A default config for github actions has been added to this repository which will build, lint and test your code.
 
 ## Dependabot
 
@@ -48,7 +47,7 @@ Included plugins:
 - @fastify/autoload
   - Used to [setup routes](#adding-routes)
 
-### [Eslint](https://github.com/eslint/eslint)
+### [Biome](https://github.com/eslint/eslint)
 
 Enforces code styles.
 
