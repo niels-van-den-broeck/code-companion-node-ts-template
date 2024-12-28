@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 import autoLoad from '@fastify/autoload';
-import path from 'path';
+import path from 'node:path';
 
 const server = Fastify({
   logger: {

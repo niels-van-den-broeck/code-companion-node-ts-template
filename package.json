@@ -4,9 +4,9 @@
   "description": "Template for fastify apps",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
+    "dev": "nodemon -e ts,json,env --exec ts-node --files -r dotenv/config src/index.ts",
     "test": "LOG_LEVEL=error node -r ts-node/register --test src/**/*.test.ts",
-    "lint": "eslint ./src",
+    "lint": "biome lint src",
     "docker:build": "docker build --build-arg PORT=3000 -t code-companion-node-ts-template .",
     "docker:run": "docker run -p  code-companion-node-ts-template"
   },
@@ -14,14 +14,9 @@
   "author": "Niels Van den broeck",
   "license": "ISC",
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/supertest": "^6.0.2",
     "dotenv": "^16.4.7",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^18.0.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "node-test-junit-reporter": "^1.1.5",
     "nodemon": "^3.1.7",
     "supertest": "^7.0.0",

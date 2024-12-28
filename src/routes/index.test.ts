@@ -15,7 +15,7 @@ describe(`${RESOURCE_URI}`, () => {
   function act(token?: string) {
     const req = request(server.server).get(RESOURCE_URI);
 
-    if (token) return req.set('Authorization', `Bearer $\{token}`);
+    if (token) return req.set('Authorization', `Bearer ${token}`);
 
     return req;
   }

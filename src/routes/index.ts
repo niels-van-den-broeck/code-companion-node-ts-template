@@ -1,8 +1,8 @@
-import { FastifyPluginCallback, RouteHandlerMethod } from 'fastify';
+import type { FastifyPluginCallback, RouteHandlerMethod } from 'fastify';
 
 const register: FastifyPluginCallback = (server, options, done) => {
   const getStatus: RouteHandlerMethod = async (request, reply) => {
-    reply.status(200).send('API is live');
+    return reply.status(200).send('API is live');
   };
 
   const successSchema = {};
